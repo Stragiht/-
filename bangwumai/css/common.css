@@ -1,0 +1,392 @@
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,table,caption,th,td,form,fieldset,legend,input,button,textarea{
+	margin:0;padding:0;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+img{
+	border:none;
+}
+html,body{
+	font: 12px '微软雅黑';
+
+}
+em,strong,i{
+	font-style: normal;
+}
+.f_mr0{
+	margin-right:0 !important; 
+}
+.f_br{
+	border-right: none !important;
+}
+
+.f_cr{
+	color: red !important;
+}
+
+.f_cr1{
+	color: #fe6a9d !important;
+}
+.f_bg{
+	background: none !important;
+}
+.f_cb:after{ 
+	display: block;
+	clear: both; 
+	visibility: hidden;
+	height: 0; 
+	overflow: hidden; 
+	content: "";
+}
+
+
+/*-------------- ---------------top信息--------------------------------- */
+.toper{
+	width: 100%;
+	height: 33px;
+	background: #f2f2f2;
+}
+.top{
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.topLeft{
+	width: 200px;
+	height: 33px;
+	float: left;
+}
+.topLeft a{
+	display: block;
+	background: url(../images/top.png) no-repeat 0 3px; 
+	color:#666;
+	font-size: 12px;
+	text-indent: 25px;
+	width: 200px;
+	height: 33px;
+	line-height: 33px;
+	color: #999999;
+
+}
+.topRight{
+	float: right;
+	width: 260px;
+	padding: 7px 0;
+	height: 19px;
+
+}
+.topRight a{
+	float: left;
+	width: 19px;
+	height: 19px;
+	line-height: 19px;
+	margin-right:18px;
+	color: #999999; 
+}
+.topRight .top_qq{
+	background: url(../images/common_min_z.png) no-repeat 0 -31px; 
+}
+.topRight .top_weixin{
+	background: url(../images/common_min_z.png) no-repeat 0 -53px; 
+}
+.topRight .top_weibo{
+	background: url(../images/common_min_z.png) no-repeat 0 -75px; 
+}
+.topRight .top_login{
+	width: 24px;
+}
+.topRight .top_phone{
+	width: 50px;
+	text-indent: 10px;
+	background: url(../images/top_phone.png) no-repeat 0 3px; 
+	
+}
+.topApp{
+	width: 260px;
+	height:260px;
+	position: absolute;
+	right:-160px;
+	top:25px;
+	z-index: 15;
+	display: none;
+	
+}
+.topApp img{
+	float: left;
+	width: 260px;
+	height: 130px;
+}
+
+
+/*-------------- ---------------head头部信息--------------------------------- */
+.head{
+	width: 1200px;
+	height: 106px;
+	margin: 0 auto;
+}
+.headLogo{
+	float: left;
+	width: 253px;
+	height: 106px;
+	background: url(../images/logo.png) no-repeat 5px 15px;
+}
+.headCenter{
+	width: 570px;
+	height: 106px;
+	float: left;
+}
+.headFrom{
+	width: 570px;
+	height: 40px;
+	margin: 23px 0 8px 0;
+}
+.headTxt{
+	width: 480px;
+	height: 34px;
+	border: 3px solid #ed145b;
+	border-radius:5px 0 0 5px; 
+	color: #767676;
+	text-indent: 14px;
+	line-height: 34px;
+	float: left;
+
+}
+.headSearch{
+	width: 87px;
+	height: 40px;
+	background: #ed145b;
+	color: #fff;
+	border: none;
+	font-size: 16px;
+	line-height: 40px;
+	text-align: center;
+	border-radius:0 5px  5px 0;
+	cursor: pointer;
+}
+.searchContent {
+	width: 570px;
+	height: 15px;
+}
+.searchContent a{
+	padding: 0 9px 0 7px;
+	color: #666666;
+	background: url(../images/searchContent_bg.png) no-repeat right;
+}
+.headRight{
+	width: 300px;
+	height: 83px;
+	padding-top:23px; 
+	float: right;
+}
+.headLink{
+	width: 100px;
+	height: 38px;
+	border: 1px solid #e4e4e4;
+	float: left;
+	color: #999999;
+}
+.headLink em{
+	display: block;
+	width: 15px;
+	height: 13px;
+	margin: 6px 0 0 45px;
+
+}
+.headLink i{
+	display: block;
+	height: 16px;
+	line-height: 16px;
+	font-size: 8px;
+	text-align: center;
+}
+.headLink .headPhone{
+	background: url(../images/common_min_z.png) no-repeat -4px -98px; 
+}
+.headLink .headMail{
+	background: url(../images/common_min_z.png) no-repeat -4px -116px; 
+}
+.headQuestion{
+	display: block;
+	width: 85px;
+	height: 40px;
+	float: left;
+	background: #ed145b;
+	line-height: 40px;
+	color: #fff;
+}
+.questionMark{
+	float: left;
+	width: 13px;
+	height: 15px;
+	margin: 14px 2px 0 8px;
+	background: #ed145b url(../images/common_min_z.png) no-repeat -6px -133px;
+}
+
+/*-------------- ---------------nav导航--------------------------------- */
+.naver{
+	width: 100%;
+	height: 40px;
+	background: #333333;
+
+}
+.navall{
+	position: relative;
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+}
+.nav{
+	width: 1200px;
+	height: 100%;
+	position: relative;
+	z-index: 1;
+}
+.nav a{
+	width: 108px;
+	height: 40px;
+	float: left;
+	color: #fff;
+	line-height: 40px;
+	font-size: 14px;
+	text-align: center;
+	margin-right:10px; 
+	cursor: pointer;
+}
+.nav a span{
+	float: right;
+	width: 7px;
+	height: 3px;
+	background: url(../images/nav_bg1.png) no-repeat;
+	margin: 21px 20px 0 0;
+}
+.nav .moveLi{
+	width: 108px;
+	height: 2px;
+	position: absolute;
+	left: 110px;
+	bottom: 0;
+	background: #ed145b;
+}
+.nav .moveSpan{
+	display: block;
+	width: 12px;
+	height: 6px;
+	background: url(../images/nav_bg2.png) no-repeat;
+	position: absolute;
+	bottom: 2px;
+	left:50%;
+	margin-left:-6px
+}
+.nav .nav_index{
+	width: 100px;
+	background: #ed145b;
+}
+.nav .nav_service{
+	width: 25px;
+	height: 25px;
+	margin: 7px 19px 0 0;
+}
+.nav .nav_quality{
+	margin: 7px 19px  0 60px;
+	background: url(../images/service_small.png) no-repeat;
+}
+.nav .nav_express{
+	
+	background: url(../images/service_small.png) no-repeat -25px 0;
+}
+.nav .nav_airplay{
+	background: url(../images/service_small.png) no-repeat -50px 0;
+}
+.nav .nav_pay{
+	background: url(../images/service_small.png) no-repeat -75px 0;
+}
+
+/*nav 导航下条hover时出现的link*/
+
+.beauty{
+	width: 905px;
+	height: 365px;
+	padding:5px 0 0 20px; 
+	position: absolute;
+	left:100px;
+	top: 40px;
+	display: none;
+	
+
+}
+.beauty1{
+	float: left;
+	margin-right:20px; 
+	width: 270px;
+}
+
+.cosmetics{
+	width: 270px;
+
+}
+.cosmetics h2{
+	width: 270px;
+	height: 30px;
+	line-height: 30px;
+	text-indent: 10px;
+	color: #333333;
+	border-bottom: 1px solid #eaeaea;
+
+}
+.cosmetics  p{
+	width: 270px;
+	height: 30px;
+	line-height: 30px;
+}
+.cosmetics p a{
+	padding: 0 10px;
+	font-size: 12px;
+	float: left;
+	background:url(../images/searchContent_bg.png) no-repeat right;
+
+	color: #666;
+}
+.cosmetics p a:hover{
+	text-decoration: underline;
+}
+.ml5{
+	padding-left: 5px !important;
+}
+.beauty2{
+	width: 270px;
+	float: left;
+	margin-right:65px; 
+}
+.face{
+	height:180px;
+}
+.face1{
+	height: 90px;
+}
+.beauty3{
+	float: left;
+	width: 280px;
+}
+.hot_brand{
+	width: 278px;
+	height: 284px;
+	border: 1px solid #ebebeb;
+	border-collapse: collapse;
+}
+.hot_brand td{
+	height: 45px;
+	width: 96px;
+	border: 1px solid #ebebeb;
+
+}
+.hot_brand img{
+	display: block;
+	height: 45px;
+	width: 96px;
+}
