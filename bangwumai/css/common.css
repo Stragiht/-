@@ -43,6 +43,37 @@ em,strong,i{
 	content: "";
 }
 
+/*价格样式共用*/
+.price_match{
+	float: left;
+}
+.nowPrice{
+	display: block;
+	width: 42px;
+	height: 22px;
+	line-height: 22px;
+	font-size: 22px;
+	color: #fe689a;
+}
+.nowPrice i{
+	display: inline-block;
+	width: 12px;
+	height: 18px;
+	font-size: 18px;
+	margin-right: 4px;
+}
+.price_match .oldPrice{
+	display: block;
+	width: 42px;
+	text-align: center;
+	height: 12px;
+	line-height: 12px;
+	text-decoration:line-through;
+	font-size: 12px;
+	color: #999;
+	
+}
+
 
 /*-------------- ---------------top信息--------------------------------- */
 .toper{
@@ -307,16 +338,19 @@ em,strong,i{
 	background: url(../images/service_small.png) no-repeat -75px 0;
 }
 
-/*nav 导航下条hover时出现的link*/
+/*nav 导航下条hover时出现的link     */
 
+/*  公共样式  */
 .beauty{
-	width: 905px;
 	height: 365px;
 	padding:5px 0 0 20px; 
 	position: absolute;
 	left:100px;
 	top: 40px;
 	display: none;
+	width: 905px;
+	z-index: 50;
+	background: #fff;
 	
 
 }
@@ -375,18 +409,27 @@ em,strong,i{
 }
 .hot_brand{
 	width: 278px;
-	height: 284px;
 	border: 1px solid #ebebeb;
 	border-collapse: collapse;
 }
 .hot_brand td{
-	height: 45px;
 	width: 96px;
 	border: 1px solid #ebebeb;
 
 }
 .hot_brand img{
 	display: block;
-	height: 45px;
+	height: 56px;
 	width: 96px;
+}
+
+/*  私有的样式   */
+.moom_product{
+	height: 120px;
+}
+.living_product{
+	height: 95px;
+}
+.digital_product{
+	height: 70px;
 }
