@@ -43,6 +43,9 @@ var remainTime = {
 			var days    = parseInt(seconds / 3600 / 24);
 			var hours   = parseInt(seconds / 60 % 24);
 			var minutes = parseInt(seconds / 60) % 60;
+			if(hours < 10){
+				hours = '0'+hours;
+			}
 			if(minutes < 10){
 				minutes = '0'+minutes;
 			}

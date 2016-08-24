@@ -9,6 +9,7 @@ a{
 }
 img{
 	border:none;
+
 }
 html,body{
 	font: 12px '微软雅黑';
@@ -106,15 +107,15 @@ em,strong,i{
 
 }
 .topRight{
-	float: right;
-	width: 260px;
+	float:right;
+	width: 300px;
 	padding: 7px 0;
 	height: 19px;
 
 }
 .topRight a{
-	float: left;
-	width: 19px;
+	float: right;
+	
 	height: 19px;
 	line-height: 19px;
 	margin-right:18px;
@@ -122,15 +123,18 @@ em,strong,i{
 }
 .topRight .top_qq{
 	background: url(../images/common_min_z.png) no-repeat 0 -31px; 
+	width: 19px;
 }
 .topRight .top_weixin{
 	background: url(../images/common_min_z.png) no-repeat 0 -53px; 
+	width: 19px;
 }
 .topRight .top_weibo{
 	background: url(../images/common_min_z.png) no-repeat 0 -75px; 
+	width: 19px;
 }
 .topRight .top_login{
-	width: 24px;
+	
 }
 .topRight .top_phone{
 	width: 50px;
@@ -413,14 +417,14 @@ em,strong,i{
 	border-collapse: collapse;
 }
 .hot_brand td{
-	width: 96px;
+	width: 90px;
 	border: 1px solid #ebebeb;
 
 }
 .hot_brand img{
 	display: block;
 	height: 56px;
-	width: 96px;
+	width: 100%;
 }
 
 /*  私有的样式   */
@@ -432,4 +436,50 @@ em,strong,i{
 }
 .digital_product{
 	height: 70px;
+}
+/*-----------------footer--------------------*/
+.footer{
+	width: 1200px;
+	margin: 0 auto;
+}
+.footLink{
+	width: 100%;
+	height: 14px;
+	line-height: 14px;
+	text-align: center;
+	margin-top:55px; 
+	color: #630063;
+}
+.footLink a{
+	padding: 0 18px 0 12px;
+	color: #666;
+}
+.footer_copyright{
+	text-align: center;
+	line-height: 25px;
+	margin: 8px 0 8px 0;
+	color: #999;
+}
+.footer_public{
+	height: 52px;
+	width: 1030px;
+	padding-left: 170px;
+}
+.footer_public a{
+	float: left;
+	height: 52px;
+}
+.footer_public  img{
+	display: block;
+
+
+}
+/*-----------------------------rightBar---------------------*/
+.rightBar{
+	width: 36px;
+	height: 100%;
+	background: #333;
+	position: fixed;
+	right: 0;
+	top:0;
 }

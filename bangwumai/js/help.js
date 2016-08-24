@@ -238,11 +238,143 @@ var lunbo = {
 };
 
 
+/* 人气推荐 女装 ，美妆 切换*/
+
+var popular  = {
+	
+	dom:{},
+
+	init:function(){
+		this.initDom();
+		this.bindEvent();
+	},
+
+	initDom:function(){
+		var dom = this.dom;
+			dom.btnArr  = $('.mainTitle span');
+			dom.content = $('.mainCon');
+	},
+	
+	bindEvent:function(){
+		var dom = this.dom;
+			
+			dom.btnArr.mouseenter(function(){
+				dom.index = $(this).index();
+				console.log(dom.index);
+				dom.btnArr.css({
+					'background': 'none',
+					'color': '#666'
+				})
+				$(this).css({
+					'background':'#fe689a',
+					'color':'#fff'
+				});
+				dom.content.css('display','none');
+				// console.log(dom.index);
+				dom.content.eq(dom.index-1).css('display','block');
+				
+			});
+
+
+	}
+};
+
+//人气品牌点击图片运动
+
+var brand = {
+
+	dom:{},
+
+	init:function(){
+		this.initDom();
+		this.bindEvent();
+	},
+
+	initDom:function(){
+		var dom     = this.dom;
+		dom.list    = $('.brand_list');
+		dom.nextBtn = $('.next_pic');
+		dom.preBtn  = $('.pre_pic');
+		dom.brand   = $('.brandIntroduce') 
+	},
+
+	bindEvent:function(){
+		var dom = this.dom;
+		var flag = true;
+		dom.preBtn.click(function(){
+
+			if(flag == true ){
+				dom.brand.css('display','none')
+				dom.brand.eq(0).css('display','block');
+				dom.list.animate({'left':0},800,function(){
+					
+					flag = false;
+					dom.nextBtn.css('background','none')
+				});
+			}
+		});
+		dom.nextBtn.click(function(){
+			if(flag == false ){
+				dom.brand.css('display','none');
+				dom.brand.eq(1).css('display','block');
+				dom.list.animate({'left':'-190px'},800,function(){
+					dom.preBtn.css('background','none')
+					flag = true;
+				});
+			}
+		});
+	}
+};
+
+
+/* 新品上架 女装 ，美妆 切换*/
+
+var newPro  = {
+	
+	dom:{},
+
+	init:function(){
+		this.initDom();
+		this.bindEvent();
+	},
+
+	initDom:function(){
+		var dom = this.dom;
+			dom.btnArr  = $('.newTitle span');
+			dom.content = $('.newPro');
+	},
+	
+	bindEvent:function(){
+		var dom = this.dom;
+			
+			dom.btnArr.mouseenter(function(){
+				dom.index = $(this).index();
+				console.log(dom.index);
+				dom.btnArr.css({
+					'background': 'none',
+					'color': '#666'
+				})
+				$(this).css({
+					'background':'#36dbd9',
+					'color':'#fff'
+				});
+				dom.content.css('display','none');
+				// console.log(dom.index);
+				dom.content.eq(dom.index-1).css('display','block');
+				
+			});
+
+
+	}
+};
+
 
 $(function(){
 	topApp.init();
 	nav.init();
 	lunbo.init();
-	
+	popular.init();
+	brand.init();
+	newPro.init();
 });
 
