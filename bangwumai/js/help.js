@@ -64,10 +64,12 @@ var nav = {
 	initDom:function(){
 		
 		var dom = this.dom;
+			dom.nav    = $('.naver');
 			dom.arr    = $('.nav_move');
 			dom.moveLi = $('.moveLi');
 			this.len   = dom.arr.size();
-			dom.subNav = $('.beauty')
+			dom.subNav = $('.beauty');
+			domTop     =dom.nav.offset().top;
 
 	},
 
@@ -91,7 +93,7 @@ var nav = {
 				
 			});
 
-			
+			//导航移入事件
 			dom.arr.mouseleave(function(){
 				dom.subNav.hide();
 				
@@ -106,8 +108,19 @@ var nav = {
 			dom.subNav.mouseleave(function(){
 				dom.subNav.hide();
 			});
+			
+			//导航条滚动事件
+			$(window).scroll(function(){
+				dom_scrollTop = $(this).scrollTop();
+				if(dom_scrollTop > domTop ){
+				
+					dom.nav.addClass('nav_fixed');
+				}else{
+					
+					dom.nav.removeClass('nav_fixed');
 
-
+				}
+			});
 
 	},
 
@@ -368,6 +381,110 @@ var newPro  = {
 	}
 };
 
+var bottom = {
+	dom : {},
+	init:function(){
+		this.initDom();
+		this.bindEvent();
+
+	},
+
+	initDom:function(){
+		
+		var dom        = this.dom;
+		dom.btn        = $('.bottom_btn');
+		dom.bottom_bar = $('.bottom_bar');
+	},
+	bindEvent:function(){
+		var dom = this.dom;
+		dom.btn.click(function(){
+			dom.bottom_bar.css('display','none');
+
+
+		});
+	}
+
+};
+/*---------------------右边栏运动事件-------------------------------*/
+
+/*var rightBar =  {
+	dom:{},
+
+	init:function(){
+		this.initDom();
+		this.bindEvent();
+	},
+
+	initDom:function(){
+		var dom    = this.dom;
+		dom.ask    = $('.rightBar_ask a');
+		dom.askBar = $('#rightAsk');
+	},
+
+	bindEvent:function(){
+		var dom = this.dom;
+		鼠标移上去
+		dom.ask.mouseover(function(){
+			console.log('sdf');
+			$(this).find('.rightAsk').css('display','block');
+			$(this).find('.rightAsk').stop().animate({'left':'-116'},800);
+		});
+		
+		dom.ask.mouseout(function(){
+			console.log(1);
+			$(this).find('.rightAsk').stop().animate({'left':'-200px'},800,function(){
+				console.log(2);
+				// $('.rightBar_ask').find('.rightAsk').css('display','none');
+			});
+			
+		});
+		
+		dom.askBar.mouseleave(function(){
+			dom.askBar.animate({'left':'-200'},800,function(){
+			dom.askBar.css('display','none');
+				
+			});
+		});
+
+	}
+}
+*/
+
+/*  ---------------------------回到顶部------------------------------*/
+
+var goTop = {
+	dom:{},
+
+	init:function(){
+		this.initDom();
+		this.bindEvent();
+	},
+
+	initDom:function(){
+		var dom = this.dom;
+		dom.backBtn = $('.goTop');
+			
+	},
+	bindEvent:function(){
+		var dom = this.dom;
+		
+		dom.backBtn.click(function(){
+			dom.scrollTop = $(window).scrollTop(); 
+			dom.timer = setInterval(function(){
+				if(dom.scrollTop < 10){
+					$(window).scrollTop(0);
+					clearInterval(dom.timer);
+				}
+				var iSpeed = 1.1;
+				
+				dom.scrollTop  = dom.scrollTop / iSpeed;
+				
+				$(window).scrollTop(dom.scrollTop);
+			},200);
+		});
+	}
+
+}
 
 $(function(){
 	topApp.init();
@@ -376,5 +493,7 @@ $(function(){
 	popular.init();
 	brand.init();
 	newPro.init();
+	bottom.init();
+	goTop.init();
 });
 

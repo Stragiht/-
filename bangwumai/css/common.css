@@ -282,6 +282,15 @@ em,strong,i{
 	position: relative;
 	z-index: 1;
 }
+.nav_fixed{
+	position: fixed;
+	left:0;
+	top:0;	
+	z-index: 25;
+	
+	
+}
+
 .nav a{
 	width: 108px;
 	height: 40px;
@@ -474,6 +483,37 @@ em,strong,i{
 
 
 }
+
+/*------------------bottom_bar----------------------------*/
+.bottom_bar{
+	width: 1200px;
+	height: 85px;
+	margin: 0 auto;
+	display: block;
+}
+.bottom_bar a{
+	display: block;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+.bottom_bar img{
+	display: block;
+	width:100%;
+	height: 100%; 
+}
+.bottom_btn{
+	width: 65px;
+	height: 65px;
+	position: absolute;
+	right: 10px;
+	bottom: 20px;
+	font-size: 65px;
+	line-height: 65px;
+	color: #abcdef;
+	z-index: 31;
+
+}
 /*-----------------------------rightBar---------------------*/
 .rightBar{
 	width: 36px;
@@ -482,4 +522,131 @@ em,strong,i{
 	position: fixed;
 	right: 0;
 	top:0;
+}
+.rightBar_list{
+	position: absolute;
+	top:128px;
+	left: 0;
+	width: 36px;
+	cursor: pointer;
+}
+.rightBar_ask{
+	width: 36px;
+	height: 36px;
+	background: #fd4f00;
+	position: relative;
+}
+.rightBar_ask:hover p {
+	left: -116px;
+	opacity: 1;
+	visibility: visible;
+}
+.rightBar_ask em{
+	float: left;
+	width: 26px;
+	height: 23px;
+	margin:5px;
+	background: url(../images/right_bar_icons.png) no-repeat;
+}
+.rightBar_ask p{
+	width: 116px;
+	height: 36px;
+	position: absolute;
+	left: -200px;
+	top:0;
+	background: #7b8d98;
+	color: #fff;
+	font-size: 14px;
+	line-height: 36px;
+	text-align: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s linear;
+}
+
+.rightBar_weixin{
+	width: 36px;
+	height: 36px;
+	margin:8px 0; 
+	background: #fd4f00;
+	position: relative;
+}
+.rightBar_weixin em{
+	float: left;
+	width: 24px;
+	height: 18px;
+	margin:8px;
+	background: url(../images/right_bar_icons.png) no-repeat 0 -41px;
+}
+.weixin_code{
+	width: 116px;
+	height: 152px;
+	position: absolute;
+	left: -200px;
+	top:0;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s linear;
+	background:  #fd4f00;
+}
+.weixin_code dt{
+	width: 116px;
+	height: 116px;
+	display: block;
+}
+.weixin_code dd{
+	height: 36px;
+	line-height: 36px;
+	color: #fff;
+	text-indent: 4px;
+}
+.rightBar_weixin:hover .weixin_code {
+	left: -116px;
+	opacity: 1;
+	visibility: visible;
+}
+.rightBar_shoppingCar{
+	background:  #fd4f00;
+	width: 36px;
+	height: 116px;
+	 
+
+}
+.rightBar_shoppingCar em{
+	float: left;
+	height: 26px;
+	width: 26px;
+	margin: 5px 5px;
+	background: url(../images/right_bar_icons.png) no-repeat 0 -77px;
+}
+.rightBar_shoppingCar span{
+	float: left;
+	padding: 0 12px;
+	
+}
+.rightBar_shoppingCar a{
+	color: #fff;
+	
+
+}
+.rightBar_shoppingCar i{
+	padding: 3px 14px 0 14px;
+}
+
+.rightBar_collect{
+	margin: 8px 0;
+}
+.rightBar_collect em{
+	background: url(../images/right_bar_icons.png) no-repeat 0 -110px;
+}
+.right_app em{
+	background: url(../images/right_bar_icons.png) no-repeat 0 -148px;
+}
+.goTop{
+	width: 36px;
+	height: 26px;
+	padding:5px;
+	margin-top:400px; 
+	background: #fd4f00 url(../images/right_bar_icons.png) no-repeat 5px -175px;
+	
 }
