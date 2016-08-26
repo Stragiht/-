@@ -486,6 +486,39 @@ var goTop = {
 
 }
 
+
+
+var login = {
+	dom:{},
+
+	init:function(){
+		
+		this.initDom();
+		this.bindEvent();
+	},
+
+	initDom:function(){
+		var dom = this.dom;
+		console.log(2)
+		dom.userName = getCookie("users");
+		dom.login = $('.top_login');
+		console.log(dom.userName);
+		
+	},
+
+	bindEvent:function(){
+		var dom = this.dom;
+
+		if( dom.userName !=''){
+			var res = window.confirm('亲，确定登录嘛？')
+			if(res){
+				dom.login.html(dom.userName);
+			}
+		} 
+	}
+
+};
+
 $(function(){
 	topApp.init();
 	nav.init();
@@ -495,5 +528,6 @@ $(function(){
 	newPro.init();
 	bottom.init();
 	goTop.init();
+	login.init();
 });
 

@@ -190,6 +190,7 @@ em,strong,i{
 	text-indent: 14px;
 	line-height: 34px;
 	float: left;
+	outline: none;
 
 }
 .headSearch{
@@ -203,6 +204,7 @@ em,strong,i{
 	text-align: center;
 	border-radius:0 5px  5px 0;
 	cursor: pointer;
+	outline: none;
 }
 .searchContent {
 	width: 570px;
