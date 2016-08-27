@@ -10,7 +10,7 @@ function setCookie(name, val, iDay) {
 	// "expires=" + 日期对象
 	// 【注意】 expires 前一定是 分号！
 	// document.cookie = "user=jobs;expires=" + obj;
-	document.cookie = "" + name + "=" + val + ";expires=" + obj; + ";path=/";
+	document.cookie = "" + name + "=" + val + ";expires=" + obj+ ";path=/";
 	//alert(document.cookie);
 }
 

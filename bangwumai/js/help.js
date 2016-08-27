@@ -498,11 +498,40 @@ var login = {
 	},
 
 	initDom:function(){
+		function getCookie(searchName) {
+
+			//user=jobs; psw=123; age=18; 
+
+			// 获取当前的cookie值
+			var str = document.cookie;
+
+			// 先分割字符串
+			var arr = str.split("; ");
+
+			for (var i = 0; i < arr.length; i++) {
+				var arr2 = arr[i].split("=");
+
+				var name = arr2[0];
+				var val = arr2[1];
+
+				if (name == searchName) {
+					return val;
+					//alert(val);
+				}
+			}
+
+			// 如果找不到名字，那么返回空字符串
+			return "";
+		}
+
+
+
+
 		var dom = this.dom;
-		console.log(2)
+		// console.log(2)
 		dom.userName = getCookie("users");
 		dom.login = $('.top_login');
-		console.log(dom.userName);
+		 // console.log(dom.userName);
 		
 	},
 
